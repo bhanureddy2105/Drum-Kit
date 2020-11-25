@@ -1,13 +1,9 @@
-
-var drumLength=document.querySelectorAll(".drum").length;
-for(var i=0;i<drumLength;i++){
-    document.querySelectorAll('.drum')[i].addEventListener('click',cliked);
-}
-function cliked(){
-    var buttonClicked=this.innerHTML;
+$(".drum").click(function () { 
+    var buttonClicked=$(this).html();
+    console.log(buttonClicked);
     makeSound(buttonClicked);
     animation(buttonClicked);
-}
+});
 
 function makeSound(key){
     switch (key) {
@@ -56,10 +52,10 @@ document.addEventListener("keyup",function(event){
 });
 
 function animation(currentKey){
-    var activeButton=document.querySelector("."+currentKey);
-    activeButton.classList.add("pressed");
+    var activeButton=$("."+currentKey);
+    $(activeButton).addClass("pressed");
     setTimeout(function(){
-        activeButton.classList.remove("pressed")
+        $(activeButton).removeClass("pressed");
     },100);
 
 }
