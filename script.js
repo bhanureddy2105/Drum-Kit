@@ -1,6 +1,5 @@
 $(".drum").click(function () { 
     var buttonClicked=$(this).html();
-    console.log(buttonClicked);
     makeSound(buttonClicked);
     animation(buttonClicked);
 });
