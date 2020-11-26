@@ -36,6 +36,10 @@ h1 {
 
 }
 
+.j,.k,.l,.d{
+    color: #ccc;
+}
+
 .w {
     background-image: url('images/crash.png');
 
@@ -47,6 +51,7 @@ h1 {
 
 .s {
     background-image: url('images/snare.png');
+    color: black;
 }
 
 .d {
